@@ -5,7 +5,7 @@ Created on Tue Dec 18 10:34:09 2018
 @author: fmdu
 """
 
-import mysql 
+import _mysql 
 
 db=_mysql.connect()
 
