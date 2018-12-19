@@ -28,7 +28,7 @@ with open('data_test.txt', 'r') as mon_fichier:
         cursor = mariadb_connection.cursor()
         cursor.execute("INSERT INTO `test`(`number`, \
         `date1`, `date2`, `civ`, `nom1`, `prenom`, `L2`, `L3`, `L4`, `L5`, `CP`, `loc`) \
-        VALUES (NULL,'%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')", (words[0], words[1],words[2],words[3],words[4],words[5],words[6],words[7],words[8],words[9],words[10]))
+        VALUES (NULL,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (words[0], words[1],words[2],words[3],words[4],words[5],words[6],words[7],words[8],words[9],words[10]))
         mariadb_connection.commit()       
         print("ligne",mariadb_connection.insert_id())
 
