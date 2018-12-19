@@ -18,9 +18,8 @@ with open('data_test.txt', 'r') as mon_fichier:
             break
         words = line.split(";")
         for i in range (0, len(words)-1): 
-        print (words[i])
+            print (words[i])
 
-    
 for i in range(0,len(words)-1):
     print (words[i])
  
