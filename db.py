@@ -11,12 +11,18 @@ import os
 ############ ouverture de fichier et lecture
 
 with open('data_test.txt', 'r') as mon_fichier:
-    texte = mon_fichier.readlines()
-    for ligne in texte :
-        words = ligne.split(";")
-    
-    for i in range(0,len(words)-1):
+    print("nomdu fichier", mon_fichier.name)
+    while 1:
+        line = mon_fichier.readline()
+        if line =="":
+            break
+        words = line.split(";")
+        for i in range (0, len(words)-1): 
         print (words[i])
+
+    
+for i in range(0,len(words)-1):
+    print (words[i])
  
 
 
