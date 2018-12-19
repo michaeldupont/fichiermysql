@@ -5,8 +5,9 @@ Created on Tue Dec 18 10:34:09 2018
 @author: fmdu
 """
 
-import _mysql
 import os
+import _mysql
+
 
 ############ ouverture de fichier et lecture
 
