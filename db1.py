@@ -17,7 +17,7 @@ with open('data_test.txt', 'r') as mon_fichier:
     print("nom du fichier", mon_fichier.name)
     while 1:
         ligne=mon_fichier.readline()
-        if line =="":
+        if ligne =="":
             break
         inputdb (ligne)
 
