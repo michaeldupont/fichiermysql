@@ -14,7 +14,7 @@ import _mysql
 with open('data_test.txt', 'r') as mon_fichier:
     print("nom du fichier", mon_fichier.name)
     while 1:
-        line=f.readline()
+        line=mon_fichier.readline()
         if not data:
             break
         words = line.split(";")
