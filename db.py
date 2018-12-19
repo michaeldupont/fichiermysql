@@ -15,7 +15,7 @@ with open('data_test.txt', 'r') as mon_fichier:
     print("nom du fichier", mon_fichier.name)
     while 1:
         line=mon_fichier.readline()
-        if not data:
+        if not line:
             break
         words = line.split(";")
         print(words)
