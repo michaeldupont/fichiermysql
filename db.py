@@ -12,7 +12,7 @@ import os
 
 with open('data_test.txt', 'r') as mon_fichier:
     texte = mon_fichier.read()
-    print (text)
+    print (texte)
 
 
 ############ gestion de la base de données mysql : écriture du fichier en base
