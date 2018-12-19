@@ -15,7 +15,7 @@ with open('data_test.txt', 'r') as mon_fichier:
     for ligne in texte :
         words = ligne.split(";")
     
-    for i in range(0,len(words)-1)
+    for i in range(0,len(words)-1):
         print words[i]
  
 
