@@ -11,8 +11,13 @@ import os
 ############ ouverture de fichier et lecture
 
 with open('data_test.txt', 'r') as mon_fichier:
-    texte = mon_fichier.read()
-    print (texte)
+    texte = mon_fichier.readlines()
+    for ligne in texte :
+        words = ligne.split(";")
+    
+    for i in range(0,len(words)-1)
+        print words[i]
+ 
 
 
 ############ gestion de la base de données mysql : écriture du fichier en base
