@@ -13,27 +13,19 @@ import _mysql
 
 with open('data_test.txt', 'r') as mon_fichier:
     print("nomdu fichier", mon_fichier.name)
-    while 1:
-        line = mon_fichier.readline()
-        if line =="":
-            break
-        words = line.split(";")
-        for i in range (0, len(words)-1): 
-            print (words[i])
+    lignes = mon_fichier.readlines()
 
-for i in range(0,len(words)-1):
-    print (words[i])
- 
-
+for line in lignes:
+    words = line.split(";")
+    print(words)
+    db=_mysql.connect(host="localhost",user="chnordfr_mike", passwd="Ezwof01d!",db="chnordfr_python")
+    db.query("""INSERT INTO `test`(`number`, `date1`, `date2`, `nom1`, `prenom`,
+        `L2`, `L3`, `L4`, `L5`, `CP`, `loc`) 
+    VALUES (NULL,'words[0]','words[1]','words[2]','words[3]','words[4]','words[5]','words[6]','words[7]','words[8]',
+    'words[9]','words[10]') """)
+    r=db.store_result()
 
 ############ gestion de la base de données mysql : écriture du fichier en base
 
 
 
-db=_mysql.connect(host="localhost",user="chnordfr_mike", passwd="Ezwof01d!",db="chnordfr_python")
-
-db.query("""SELECT * FROM `test` WHERE 1""")
-
-r=db.store_result()
-
-print(r)
